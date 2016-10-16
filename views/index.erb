@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SinApp</title>
+    <style>
+      .result_short_url {
+        float: left;
+      }
+
+      .result_url {
+        float: left;
+      }
+    </style>
+  </head>
+  <body>
+      <div class="container">
+        <h1>sinatra app</h1>
+
+        <p>Currently serving <%= @urls.count %> shortened links</p>
+        <p>Clicked <%= ClickTrack.all.count %> times</p>
+
+        <form method="post">
+          <input type="text" value="<%= h(params[:url]) %>" name="url" id="url" />
+          <input type="submit" value="Go" id="submit" />
+        </form>
+        <div class="clear"></div>
+        <% if url %>
+        <div class="result_short_url">
+          Your URL is:<br>
+          <ol><% ShortURL.all.each do |p| %>
+          <li><a href=<%="#{SiteConfig.url_base}#{p.short_url}" %>><%= "#{SiteConfig.url_base}#{p.short_url}" %></a></li>
+          <% end %></ol>
+        </div>
+         <div class="result_url">
+          Your message is:<br>
+          <ol><% ShortURL.all.each do |p| %>
+          <li><%= p.url %></li>
+        <% end %></ol>
+        </div>
+        <% end %>
+      </div>
+  </body>
+</html>
