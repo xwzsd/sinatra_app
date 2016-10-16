@@ -1,1 +1,0 @@
-The public folder can be used to run our Sinatra application on Apache using Passenger.
