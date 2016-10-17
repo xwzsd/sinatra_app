@@ -12,7 +12,7 @@ configure do
   SiteConfig = OpenStruct.new(
           :title => 'Sinatra_app',
           :author => 'Your Name Can Go Here',
-          :url_base => "https://secret-scrubland-67713.herokuapp.com/"
+          :url_base => "http://localhost:4567/"
         )
 
   $LOAD_PATH.unshift("#{File.dirname(__FILE__)}/lib")
