@@ -12,6 +12,13 @@ gem 'dm-aggregates'
 gem 'dm-migrations'
 gem 'haml'
 gem 'aescrypt'
+group :development, :test do
+  gem 'sqlite3'
+end
+
+group :production do
+  gem 'pg'
+end
 
 group :test do
   gem 'rspec', :require => 'spec'
