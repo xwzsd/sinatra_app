@@ -15,7 +15,7 @@ configure do
 end
 
 
-configure :development do
+configure :production do
   DataMapper.auto_upgrade!
   before do
     puts '[Params]'
