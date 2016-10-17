@@ -1,0 +1,13 @@
+development:
+  adapter: postgresql
+  database: sinatra_development
+  host: localhost
+  username: postgres
+  password: postgres
+
+  production:
+  adapter: postgresql
+  database: sinatra_production
+  host: localhost
+  username: postgres
+  password: postgres

@@ -5,7 +5,6 @@ gem 'pry', '~> 0.10.4'
 gem 'rake'
 gem 'data_mapper'
 gem 'dm-core'
-gem 'dm-sqlite-adapter'
 gem 'dm-timestamps'
 gem 'dm-validations'
 gem 'dm-aggregates'
@@ -14,10 +13,12 @@ gem 'haml'
 gem 'aescrypt'
 group :development, :test do
   gem 'sqlite3'
+  gem 'dm-sqlite-adapter'
 end
 
 group :production do
-  gem 'pg'
+    gem "pg"
+    gem "dm-postgres-adapter"
 end
 
 group :test do
