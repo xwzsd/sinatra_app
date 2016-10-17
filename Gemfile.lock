@@ -109,7 +109,6 @@ DEPENDENCIES
   dm-sqlite-adapter
   dm-timestamps
   dm-validations
-  do_sqlite3 (~> 0.10.17)
   haml
   pg
   pry (~> 0.10.4)
